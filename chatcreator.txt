@@ -1,0 +1,1037 @@
+﻿MASTER PROJECT PROMPT: BUILD A ZERO-FRAMEWORK CUSTOMIZABLE CHATBOT CREATOR MICRO-SAAS PLATFORM
+1. PROJECT IDENTITY
+You are an elite software architect, senior vanilla JavaScript engineer, UI/UX designer, integration specialist, security engineer, and technical documentation author.
+Your task is to design and build a complete, robust, extensible, production-oriented, zero-framework Custom Chatbot Creator Micro-SaaS platform.
+The application will empower individuals, developers, startups, agencies, entrepreneurs, and businesses to independently create, customize, deploy, manage, and integrate intelligent customer-support chatbots without requiring advanced programming knowledge, expensive infrastructure, complicated technology stacks, or heavy development dependencies.
+The platform should operate as a lightweight chatbot creation and management studio.
+Think of the project as a combination of:
+* A no-code chatbot builder.
+* A customizable customer-support assistant creator.
+* A conversational flow management system.
+* A chatbot knowledge-base manager.
+* A reusable embeddable website chatbot engine.
+* A multi-channel integration platform.
+* A chatbot deployment and configuration management system.
+* A lightweight Micro-SaaS product.
+The final product must feel like a professional commercial software application, not a programming tutorial, experimental prototype, or simple chatbot demonstration.
+2. CORE DEVELOPMENT PHILOSOPHY: ZERO FRAMEWORKS, ZERO BUILD DEPENDENCIES
+The entire application must follow a strict lightweight development philosophy.
+Permitted technologies
+Use only:
+* HTML5 for application structure.
+* CSS3 for styling, layouts, responsive interfaces, animations, and themes.
+* Vanilla JavaScript using native ES modules.
+* TypeScript only where a genuine compilation-free execution strategy is supported; otherwise, use JavaScript with JSDoc documentation and optional type declarations.
+* JSON as the primary chatbot configuration and data-exchange format.
+* XML, CSV, JavaScript, or other lightweight formats where they provide genuine additional value.
+* Native browser APIs.
+* Fetch API.
+* Web Components where useful.
+* IndexedDB and localStorage where appropriate.
+* Native browser form validation.
+* Service Workers where useful.
+* SVG for lightweight icons and visual elements.
+* CDN-hosted libraries only when they provide a significant benefit and are not essential to the application's core operation.
+Strictly prohibited
+Do not introduce:
+* React.
+* Angular.
+* Vue.
+* Svelte.
+* Next.js.
+* Nuxt.
+* Astro.
+* Gatsby.
+* Bootstrap.
+* Tailwind CSS.
+* jQuery.
+* Express.js.
+* NestJS.
+* Laravel.
+* Django.
+* Flask.
+* Webpack.
+* Vite.
+* Parcel.
+* Rollup.
+* npm-based runtime dependencies.
+* Framework-dependent component libraries.
+* Heavy build systems.
+* Unnecessary package installations.
+* Unnecessary external databases.
+* Artificial complexity.
+Do not require npm install, framework initialization, package compilation, or a bundling procedure to run the core application.
+The application should run using ordinary static hosting and a modern browser.
+Use native JavaScript modules and keep the code readable, modular, maintainable, and reusable.
+If a particular integration genuinely requires server-side execution, implement it as an optional lightweight serverless integration layer using native platform capabilities wherever possible. Keep this layer isolated from the frontend application.
+Important: Do not confuse zero-framework development with eliminating necessary server-side security. The objective is minimal infrastructure, not insecure architecture.
+3. PRODUCT OBJECTIVES
+The application must allow a user to:
+1. Create an unlimited number of independent chatbot configurations, subject to any limits imposed by the deployment environment.
+2. Give each chatbot a unique name, identity, purpose, and personality.
+3. Customize the chatbot's appearance and branding.
+4. Configure welcome messages and conversation starters.
+5. Add frequently asked questions and business information.
+6. Create structured conversational workflows.
+7. Configure predefined responses and conditional conversation paths.
+8. Configure fallback responses for unanswered questions.
+9. Define customer-support escalation and human handoff rules.
+10. Manage chatbot availability and business operating hours.
+11. Customize the chatbot's language and communication style.
+12. Preview chatbot behavior before publishing.
+13. Export and import chatbot configurations.
+14. Publish independent chatbot instances.
+15. Generate installation snippets for websites.
+16. Integrate supported messaging platforms through secure channel adapters.
+17. Update published chatbot configurations without unnecessarily reinstalling their website widgets.
+18. Manage chatbot versions and recover previous configurations.
+19. Monitor chatbot interactions and operational performance where appropriate.
+20. Access comprehensive developer and end-user documentation.
+Every chatbot must be independent, reusable, portable, configurable, and capable of operating with its own settings.
+4. APPLICATION ARCHITECTURE
+Separate the application into clearly defined components.
+A. Chatbot Creator Studio
+This is the primary administrative application.
+It should provide a polished dashboard from which users can create, configure, edit, test, publish, duplicate, export, import, and manage chatbots.
+B. Chatbot Runtime Engine
+Build a separate lightweight JavaScript runtime responsible for executing chatbot configurations.
+The runtime should:
+* Load chatbot configuration.
+* Render the chat interface.
+* Manage conversation states.
+* Process user messages.
+* Match questions against the configured knowledge base.
+* Execute conversation workflows.
+* Display quick replies and interactive options.
+* Execute supported chatbot actions.
+* Handle fallback responses.
+* Support escalation to human support.
+* Maintain conversation context.
+* Handle errors gracefully.
+* Work independently of the administrative dashboard.
+Do not tightly couple the chatbot runtime to the creator dashboard.
+A chatbot published by the studio must continue functioning independently of the dashboard interface.
+C. Configuration Management Engine
+Build a dedicated configuration manager.
+Use JSON as the default configuration format.
+Support optional import/export of XML and readable JavaScript configuration representations where safe and practical.
+Every configuration must follow a documented schema and include schema versioning.
+Never use arbitrary executable JavaScript as imported chatbot configuration. Do not use eval() or unsafe dynamic code execution to process chatbot settings.
+D. Integration Adapter Engine
+Create an extensible integration architecture that allows supported communication platforms to connect to the same chatbot runtime and conversation logic.
+Use a standardized adapter interface.
+Each adapter must be independent and replaceable without requiring changes to the central chatbot engine.
+E. Optional Integration Bridge
+Implement an isolated integration bridge for platforms that require server-side communication, authentication, webhooks, or secret management.
+Keep it lightweight, framework-independent, and optional for users who only need website chatbots.
+Use native serverless functions or similarly minimal execution environments where required.
+Document all infrastructure requirements honestly.
+5. PROFESSIONAL DASHBOARD AND USER INTERFACE
+Create a modern, attractive, professional administrative interface.
+The dashboard must have excellent usability, clean information hierarchy, appropriate spacing, intuitive navigation, consistent typography, responsive layouts, meaningful visual feedback, and accessible controls.
+Dashboard sections
+Create the following sections:
+1. Overview Dashboard
+Display:
+* Total chatbots created.
+* Published chatbots.
+* Draft chatbots.
+* Active integrations.
+* Available chatbot templates.
+* Recent activity.
+* Recent chatbot modifications.
+* Basic conversation statistics where data collection is enabled.
+* Useful onboarding shortcuts.
+Do not display invented statistics or fake operational metrics.
+2. My Chatbots
+Provide a management interface for all created chatbot instances.
+Every chatbot should have:
+* Unique identifier.
+* Name.
+* Description.
+* Creation date.
+* Last modified date.
+* Publication status.
+* Configuration version.
+* Supported channels.
+* Actions for editing, duplicating, previewing, exporting, publishing, and deleting.
+3. Create New Chatbot
+Provide an intuitive chatbot creation wizard.
+Allow users to begin with:
+* A blank chatbot.
+* A customer-support chatbot.
+* An FAQ chatbot.
+* An e-commerce assistant.
+* A booking and appointment assistant.
+* A business information assistant.
+* A lead-generation chatbot.
+* A technical-support chatbot.
+* An educational assistant.
+Templates must remain editable and must not impose unnecessary restrictions.
+4. Chatbot Builder
+Provide a complete customization workspace.
+Organize its configuration tools into understandable sections:
+* General settings.
+* Bot identity and personality.
+* Appearance and branding.
+* Welcome experience.
+* Knowledge base.
+* FAQs and predefined responses.
+* Conversation workflows.
+* Quick replies.
+* Business hours.
+* Human handoff.
+* Languages.
+* Privacy settings.
+* Channel integrations.
+* Publishing and deployment.
+* Advanced settings.
+5. Integration Center
+Display supported integrations, connection instructions, configuration status, deployment requirements, and integration health.
+6. Documentation Center
+Provide convenient access to developer documentation and chatbot owner documentation.
+6. CHATBOT CUSTOMIZATION SYSTEM
+Each chatbot must support extensive customization without requiring the owner to edit application source code.
+A. Identity and personality
+Allow users to configure:
+* Chatbot name.
+* Business name.
+* Assistant description.
+* Role and purpose.
+* Tone of communication.
+* Formal or informal language.
+* Friendly, professional, conversational, or technical personality.
+* Greeting messages.
+* Welcome messages.
+* Conversation-ending messages.
+* Fallback messages.
+* Error messages.
+* Human-support availability messages.
+B. Visual customization
+Allow users to configure:
+* Primary brand color.
+* Secondary color.
+* Background color.
+* Text colors.
+* Chat widget position.
+* Widget dimensions.
+* Header appearance.
+* Chat bubble appearance.
+* Chatbot avatar.
+* Business logo.
+* Custom welcome-screen design.
+* Button appearance.
+* Border radius.
+* Font families.
+* Light and dark themes.
+* Custom CSS variables.
+* Mobile and desktop presentation.
+Provide live previews.
+Custom CSS must be scoped to the chatbot instance and must not interfere with the website where the widget is installed.
+C. Welcome experience
+Support:
+* Greeting messages.
+* Welcome screens.
+* Suggested questions.
+* Quick-reply buttons.
+* Conversation-start options.
+* Optional user identification fields.
+* Consent messages where necessary.
+D. Knowledge Base Manager
+Create a simple but powerful knowledge-base management system.
+Users must be able to add, edit, organize, search, import, and delete knowledge-base entries.
+Support:
+* Frequently asked questions.
+* Answers.
+* Categories.
+* Keywords.
+* Alternative question phrasings.
+* Product information.
+* Service descriptions.
+* Pricing information.
+* Business policies.
+* Working hours.
+* Contact information.
+* Shipping and delivery information.
+* Return and refund policies.
+* Custom business information.
+Provide bulk JSON import/export.
+CSV and XML import can be supported as optional conveniences.
+Implement a lightweight deterministic question-matching engine using normalized text, keyword matching, configurable matching thresholds, and appropriate relevance scoring.
+The system must identify the most relevant answer and return an appropriate fallback when confidence is insufficient.
+Never present a guessed answer as verified business information.
+Do not claim that the application provides AI-powered semantic understanding or large-language-model capabilities unless an actual AI provider has been configured and securely integrated.
+E. Conversation Flow Builder
+Create an accessible visual or structured conversation-flow editor.
+Support:
+* Starting messages.
+* Questions.
+* Answers.
+* Conditional branches.
+* Quick replies.
+* Button selections.
+* User input collection.
+* Email collection.
+* Phone number collection.
+* Contact forms.
+* Booking requests.
+* Lead capture.
+* Support escalation.
+* Conversation termination.
+Provide a node-based representation where practical.
+Alternatively, use an intuitive list-based workflow builder if it produces a more stable and accessible experience without external diagramming libraries.
+Allow users to reorder, edit, duplicate, connect, and delete workflow steps.
+Include flow validation to prevent broken references, unreachable nodes, infinite loops, and incomplete workflows.
+F. Conversation memory
+Implement lightweight session-based context management.
+Allow the chatbot to remember relevant information during a conversation.
+Allow business owners to configure which information may be retained, for how long, and whether it should persist across sessions.
+Do not collect sensitive information unnecessarily.
+G. Business Rules
+Allow chatbot owners to configure:
+* Business availability.
+* Opening hours.
+* Holidays.
+* Time zones.
+* After-hours responses.
+* Working days.
+* Support escalation conditions.
+* Business-specific instructions.
+* Restricted subjects.
+* Response behavior.
+H. Multiple Languages
+Support configurable interface and response languages.
+Provide a simple localization structure so businesses can supply translations without modifying the runtime.
+Never claim automatic translation unless a translation provider is configured.
+7. CHATBOT PUBLISHING AND WEBSITE EMBEDDING
+This is one of the application's most important capabilities.
+Every published chatbot must generate a reusable, lightweight website integration snippet.
+A business owner should be able to copy the generated code and install the chatbot on an external website.
+Required embedding capabilities
+Support:
+* Ordinary HTML websites.
+* CSS-based websites.
+* Vanilla JavaScript websites.
+* Static websites.
+* GitHub Pages.
+* Netlify.
+* Cloudflare Pages.
+* WordPress websites.
+* Shopify storefronts where custom script installation is supported.
+* Other platforms that permit custom HTML or JavaScript embedding.
+Generate simple installation instructions for each supported environment.
+Example embedding concept
+Generate a configuration-specific installation snippet similar to:
+<script
+  src="https://YOUR-DOMAIN.com/chatbot/loader.js"
+  data-chatbot-id="YOUR-CHATBOT-ID"
+  async
+></script>
+The actual implementation must include proper configuration loading, error handling, domain validation where configured, version management, and secure communication.
+Essential widget behavior
+The embedded widget must:
+* Load asynchronously.
+* Avoid blocking the host website.
+* Work on mobile and desktop.
+* Support responsive rendering.
+* Isolate its CSS from host website styles.
+* Avoid exposing private configuration secrets.
+* Support multiple instances only where explicitly enabled.
+* Handle unavailable configuration endpoints gracefully.
+* Avoid creating duplicate widgets.
+* Provide accessible keyboard navigation.
+* Support screen readers.
+* Respect reduced-motion preferences.
+* Work with common content-management systems.
+* Offer a customizable launcher.
+* Maintain independent chat sessions where appropriate.
+Use a sandboxed iframe or another appropriately isolated rendering architecture where it provides stronger protection against host-page CSS and JavaScript interference.
+Provide versioned runtime assets so existing installations remain stable when the creator application is updated.
+8. MULTI-CHANNEL INTEGRATION SYSTEM
+The application must be designed for multi-channel chatbot deployment.
+Do not restrict the platform to website widgets.
+Create a reusable adapter architecture.
+Required channel integration targets
+Design integration support for:
+1. Website embedded chatbot.
+2. WhatsApp Business Platform.
+3. Telegram Bot API.
+4. Facebook Messenger.
+5. Instagram messaging where supported.
+6. Generic webhook integrations.
+7. Email support handoff.
+8. Future third-party messaging platforms.
+Critical integration requirements
+Website chat should be the first fully operational integration.
+For every additional platform:
+* Investigate its current official API.
+* Identify authentication requirements.
+* Identify incoming-message mechanisms.
+* Identify outgoing-message mechanisms.
+* Identify webhook requirements.
+* Identify platform permissions and restrictions.
+* Identify message formatting limitations.
+* Identify account verification or approval requirements.
+* Identify rate limits and relevant costs.
+* Follow current official developer documentation.
+* Implement only functionality that can actually be supported.
+WhatsApp integration
+Provide a dedicated WhatsApp Business Platform integration.
+Support the official Cloud API architecture where configured.
+The integration should cover:
+* Business account configuration.
+* Phone number identification.
+* Secure API credential management.
+* Incoming message webhooks.
+* Outgoing messages.
+* Message status events.
+* Supported interactive message types.
+* Template-message handling where applicable.
+* Customer consent and messaging-policy requirements.
+* Webhook verification.
+* Secure message processing.
+* Connection-status reporting.
+Never expose WhatsApp access tokens or application secrets inside browser JavaScript, HTML, public JSON files, or downloadable chatbot configurations.
+Telegram integration
+Provide a dedicated Telegram Bot API integration.
+Support:
+* Bot token configuration.
+* Bot identity validation.
+* Incoming updates.
+* Webhook registration.
+* Webhook verification using the supported secret-token mechanism.
+* Outgoing messages.
+* Quick-reply and inline-keyboard capabilities where supported.
+* Message processing.
+* Error handling.
+* Connection status.
+Telegram credentials must be stored securely on the server-side integration bridge.
+Generic Webhook Integration
+Build a reusable webhook configuration interface.
+Allow chatbot owners to configure:
+* Webhook URL.
+* HTTP method.
+* Required headers.
+* Authentication configuration.
+* Request payload mapping.
+* Response mapping.
+* Event triggers.
+* Retry behavior.
+* Timeout settings.
+* Logging and connection status.
+Redact credentials and private data from logs.
+Integration Architecture
+Define a consistent adapter contract containing methods such as:
+connect()
+disconnect()
+validateConfiguration()
+normalizeIncomingMessage()
+sendMessage()
+verifyWebhook()
+getConnectionStatus()
+The exact methods should be adapted to each channel's technical requirements.
+All channels should reuse the same central conversation-processing logic wherever capabilities permit.
+When a channel lacks a particular widget feature, gracefully translate it into a supported alternative instead of silently failing.
+Integration limitation policy
+Do not represent a channel as fully integrated merely because its settings page exists.
+Clearly distinguish:
+* Fully implemented.
+* Tested and operational after configuration.
+* Requires external credentials.
+* Requires an integration bridge.
+* Requires provider approval.
+* Demonstration only.
+* Not yet supported.
+No fake connection statuses, fabricated API responses, simulated successful deliveries, or misleading integration claims.
+9. DATA STORAGE AND PORTABILITY
+Keep chatbot configurations simple, portable, and human-readable.
+Use JSON as the primary storage and interchange format.
+Support:
+* New configuration creation.
+* Editing.
+* Automatic draft saving.
+* Configuration validation.
+* JSON export.
+* JSON import.
+* Configuration duplication.
+* Configuration versioning.
+* Restore from previous versions.
+* Backup and recovery.
+* Configuration migration between supported schema versions.
+Use a documented configuration structure similar to:
+{
+  "schemaVersion": "1.0.0",
+  "id": "business-support-001",
+  "name": "Business Support Assistant",
+  "status": "draft",
+  "identity": {
+    "businessName": "Example Business",
+    "assistantName": "Support Assistant",
+    "personality": "professional",
+    "welcomeMessage": "Hello! How can we help you?"
+  },
+  "appearance": {
+    "theme": "light",
+    "position": "bottom-right",
+    "primaryColor": "#2563eb"
+  },
+  "knowledgeBase": [],
+  "conversationFlows": [],
+  "businessRules": {},
+  "integrations": {},
+  "privacy": {}
+}
+This is an illustrative structure, not a rigid limitation.
+Implement a comprehensive schema that accommodates all chatbot features.
+Storage architecture
+Clearly distinguish between:
+Local development and standalone mode
+* Use localStorage for small preferences and lightweight drafts.
+* Use IndexedDB where larger local datasets are required.
+* Provide downloadable JSON backups.
+* Provide configuration import and restoration.
+* Never assume that browser storage is a secure central database.
+Static publishing mode
+* Allow published, non-sensitive chatbot configurations to be hosted as versioned JSON assets.
+* Support static hosting.
+* Make sure published configuration data contains no private credentials or internal secrets.
+Managed SaaS mode
+A true multi-user SaaS service requires authenticated access and shared persistence.
+Where required, provide an optional minimal serverless API and storage layer.
+Keep authentication, tenant isolation, billing integrations, and secret management separate from the lightweight frontend.
+Do not fake multi-user authentication or claim that localStorage provides secure account-based SaaS functionality.
+Clearly document the differences and deployment requirements of these modes.
+10. USER ACCOUNT AND SAAS READINESS
+Design the architecture so that it can support a genuine multi-user Micro-SaaS product.
+Consider:
+* Account management.
+* User onboarding.
+* Workspace management.
+* Multiple chatbots per workspace.
+* Role-based permissions.
+* Ownership and access control.
+* Subscription-plan integration.
+* Usage limits.
+* Chatbot limits.
+* Usage metering.
+* Configuration backups.
+* Account export.
+* Account deletion.
+However, do not introduce payment processing or account-registration simulations as fake production features.
+Implement optional SaaS infrastructure only through clearly documented secure integration boundaries.
+The initial product must remain useful without payment processing, external authentication providers, or complicated infrastructure.
+11. CHATBOT TESTING AND PREVIEW SYSTEM
+Create a complete chatbot testing environment.
+Each chatbot must be testable before publication.
+Include:
+* Live chat preview.
+* Desktop preview.
+* Mobile preview.
+* Welcome-message testing.
+* FAQ testing.
+* Conversation-flow testing.
+* Fallback testing.
+* Business-hours testing.
+* Quick-reply testing.
+* Handoff testing.
+* Language testing.
+* Configuration validation.
+* Integration readiness checks.
+Provide useful test results and explain configuration problems in understandable language.
+Allow the user to test changes without accidentally publishing unfinished chatbot configurations.
+12. ANALYTICS AND CONVERSATION MANAGEMENT
+Provide lightweight analytics and conversation-management capabilities where the necessary data infrastructure exists.
+Potential metrics include:
+* Total conversations.
+* Unique sessions.
+* Message volume.
+* Frequently asked questions.
+* Unanswered questions.
+* Fallback frequency.
+* Conversation completion.
+* Handoff requests.
+* Integration failures.
+Include a conversation inbox for supported channels where message retrieval and persistence have genuinely been implemented.
+Provide export functionality for appropriate conversation records.
+Apply data-minimization, access-control, retention, and deletion rules.
+Do not fabricate analytics or collect conversation content without appropriate disclosure and configuration.
+13. SECURITY, PRIVACY, AND PRODUCTION QUALITY
+Security is a mandatory requirement, not an optional improvement.
+Implement appropriate protection against:
+* Cross-site scripting.
+* HTML injection.
+* Unsafe URL handling.
+* Malicious configuration imports.
+* Unauthorized access.
+* Cross-tenant data exposure.
+* Credential leakage.
+* Cross-site request forgery where applicable.
+* Insecure webhook processing.
+* Abuse and spam.
+* Denial-of-service risks.
+* Session misuse.
+* Sensitive information exposure.
+Additional requirements:
+1. Sanitize user-generated content before rendering.
+2. Prefer safe DOM APIs over unsafe HTML insertion.
+3. Validate and normalize incoming configurations.
+4. Validate webhook signatures or secret tokens as appropriate for each provider.
+5. Keep all privileged credentials server-side.
+6. Apply HTTPS to production communication.
+7. Implement appropriate CORS restrictions.
+8. Provide configurable allowed-domain restrictions for website embedding.
+9. Use secure headers and a documented Content Security Policy.
+10. Apply rate limiting at server-side endpoints where appropriate.
+11. Avoid storing unnecessary personal information.
+12. Provide data-retention controls.
+13. Document privacy responsibilities for chatbot owners.
+14. Ensure that customer data belonging to one workspace cannot be accessed by another.
+15. Handle errors without exposing credentials, stack traces, or sensitive internal information.
+Never claim the product is fully secure simply because frontend validation exists.
+14. USER EXPERIENCE AND ACCESSIBILITY
+Follow professional interface design and accessibility practices.
+The application should provide:
+* Responsive design.
+* Consistent navigation.
+* Clear visual hierarchy.
+* Readable typography.
+* Accessible forms.
+* Descriptive labels.
+* Keyboard navigation.
+* Visible focus indicators.
+* Appropriate contrast.
+* Screen-reader support.
+* Accessible modals and dialogs.
+* Loading indicators.
+* Empty states.
+* Success and error feedback.
+* Confirmation before destructive operations.
+* Undo support where practical.
+* Helpful onboarding.
+* Contextual help.
+* Meaningful error messages.
+Avoid unnecessary animations, excessive gradients, overcrowded dashboards, confusing layouts, and decorative features that reduce usability.
+Use reusable CSS variables and a centralized design system.
+15. SUGGESTED PROJECT STRUCTURE
+Use a clear, modular structure similar to:
+chatbot-creator/
+│
+├── index.html
+├── README.md
+├── LICENSE
+│
+├── assets/
+│   ├── css/
+│   │   ├── main.css
+│   │   ├── dashboard.css
+│   │   ├── builder.css
+│   │   ├── widget.css
+│   │   └── responsive.css
+│   │
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── router.js
+│   │   ├── state.js
+│   │   ├── storage.js
+│   │   ├── config-manager.js
+│   │   ├── validation.js
+│   │   ├── chatbot-engine.js
+│   │   ├── knowledge-engine.js
+│   │   ├── conversation-manager.js
+│   │   ├── workflow-engine.js
+│   │   ├── integration-manager.js
+│   │   ├── analytics.js
+│   │   ├── security.js
+│   │   └── utilities.js
+│   │
+│   └── icons/
+│
+├── chatbot/
+│   ├── loader.js
+│   ├── runtime.js
+│   ├── renderer.js
+│   ├── conversation.js
+│   ├── styles.css
+│   └── adapters/
+│       ├── website.js
+│       ├── telegram.js
+│       ├── whatsapp.js
+│       ├── generic-webhook.js
+│       └── adapter-interface.js
+│
+├── data/
+│   ├── schemas/
+│   │   └── chatbot-schema.json
+│   ├── templates/
+│   ├── examples/
+│   └── localization/
+│
+├── integrations/
+│   ├── README.md
+│   ├── serverless/
+│   │   ├── telegram-webhook.js
+│   │   ├── whatsapp-webhook.js
+│   │   └── api/
+│   └── deployment-examples/
+│
+├── docs/
+│   ├── README.md
+│   ├── DEVELOPER-GUIDE.md
+│   ├── CHATBOT-OWNER-GUIDE.md
+│   ├── INSTALLATION-GUIDE.md
+│   ├── INTEGRATION-GUIDE.md
+│   ├── CONFIGURATION-REFERENCE.md
+│   ├── API-REFERENCE.md
+│   ├── SECURITY-AND-PRIVACY.md
+│   └── TROUBLESHOOTING.md
+│
+├── examples/
+│   ├── basic-chatbot.json
+│   ├── customer-support.json
+│   └── ecommerce-assistant.json
+│
+└── tests/
+    ├── config-tests.js
+    ├── chatbot-engine-tests.js
+    ├── workflow-tests.js
+    └── integration-tests.js
+You may adjust this structure to improve implementation quality, but preserve separation of concerns.
+Do not create unnecessary empty files, artificial modules, or misleading placeholder implementations.
+16. MANDATORY DOCUMENTATION: TWO COMPLETE DOCUMENTATION SYSTEMS
+Documentation is a core deliverable.
+Create two substantial, independent documentation guides.
+DOCUMENTATION ONE: DEVELOPER DOCUMENTATION
+File: docs/DEVELOPER-GUIDE.md
+Audience:
+* Developers maintaining the creator application.
+* Developers extending the chatbot engine.
+* Developers building new integrations.
+* Technical teams deploying the platform.
+* Developers integrating the app with additional services.
+Cover:
+1. Product overview.
+2. System architecture.
+3. Zero-framework development philosophy.
+4. Technology choices.
+5. Project structure.
+6. Application installation.
+7. Local development.
+8. Running the application without build tools.
+9. JavaScript module architecture.
+10. Chatbot configuration schema.
+11. Configuration validation.
+12. Configuration storage.
+13. Runtime engine internals.
+14. Knowledge-base matching algorithm.
+15. Conversation-state management.
+16. Workflow engine.
+17. Widget-rendering architecture.
+18. Website embedding architecture.
+19. Integration adapter architecture.
+20. Creating a new messaging-platform adapter.
+21. WhatsApp integration architecture.
+22. Telegram integration architecture.
+23. Webhook implementation.
+24. Secret management.
+25. Optional serverless functionality.
+26. API contracts.
+27. Error handling.
+28. Security architecture.
+29. Privacy and data management.
+30. Testing procedures.
+31. Deployment.
+32. Version management.
+33. Debugging.
+34. Performance optimization.
+35. Troubleshooting.
+36. Contribution guidelines.
+37. Future extension opportunities.
+Include relevant code examples, configuration examples, architecture explanations, installation instructions, and realistic integration examples.
+DOCUMENTATION TWO: CHATBOT OWNER AND CONSUMER DOCUMENTATION
+File: docs/CHATBOT-OWNER-GUIDE.md
+Audience:
+* Businesses using the chatbot creator.
+* Entrepreneurs.
+* Website owners.
+* Agencies.
+* Nontechnical chatbot administrators.
+* Anyone creating a customized chatbot for their organization.
+Use clear, straightforward language.
+Cover:
+1. Introduction to the chatbot creator.
+2. Understanding the dashboard.
+3. Creating an account or starting in standalone mode.
+4. Creating the first chatbot.
+5. Choosing a chatbot template.
+6. Configuring the assistant's identity.
+7. Customizing the chatbot's appearance.
+8. Setting welcome messages.
+9. Adding FAQs.
+10. Importing business knowledge.
+11. Configuring conversation workflows.
+12. Creating quick replies.
+13. Configuring business hours.
+14. Setting up customer-support handoff.
+15. Selecting supported languages.
+16. Testing the chatbot.
+17. Publishing the chatbot.
+18. Installing it on a normal HTML website.
+19. Installing it on WordPress.
+20. Installing it on Shopify where supported.
+21. Integrating it with GitHub Pages or other static websites.
+22. Configuring WhatsApp.
+23. Configuring Telegram.
+24. Understanding third-party integrations.
+25. Managing multiple chatbots.
+26. Exporting and backing up configurations.
+27. Updating published chatbots.
+28. Privacy settings.
+29. Troubleshooting.
+30. Frequently asked questions.
+For each supported integration, provide:
+* Prerequisites.
+* Account requirements.
+* Setup instructions.
+* Configuration requirements.
+* Installation instructions.
+* Verification steps.
+* Common errors.
+* Troubleshooting instructions.
+Include copy-and-paste examples wherever practical.
+Clearly identify integrations that require external accounts, approvals, paid API usage, or additional server-side infrastructure.
+17. API AND EXTENSIBILITY REQUIREMENTS
+Design the central application so future developers can extend it without rewriting existing modules.
+Provide documented interfaces for:
+* Creating chatbot instances.
+* Loading chatbot configurations.
+* Updating configurations.
+* Publishing chatbots.
+* Loading runtime configurations.
+* Processing messages.
+* Executing workflows.
+* Registering integrations.
+* Sending outbound messages.
+* Receiving inbound messages.
+* Managing conversation sessions.
+* Exporting and importing data.
+Use consistent naming conventions, predictable return values, and centralized error handling.
+Document all public interfaces and their expected inputs and outputs.
+18. PERFORMANCE AND RELIABILITY
+The application must be lightweight and efficient.
+Requirements:
+* No unnecessary dependencies.
+* Minimal JavaScript payload.
+* Lazy-load nonessential functionality.
+* Avoid excessive DOM manipulation.
+* Avoid unnecessary network requests.
+* Cache suitable static resources.
+* Keep the widget independent of the host website's framework.
+* Handle slow or unavailable networks.
+* Implement timeouts and retries where appropriate.
+* Prevent duplicate event handlers.
+* Handle invalid or outdated configurations.
+* Provide graceful degradation.
+* Preserve recoverable drafts.
+* Avoid losing user changes unexpectedly.
+The core website chatbot must remain usable on ordinary mobile devices and modest internet connections.
+19. TESTING AND QUALITY ASSURANCE
+Create a practical testing strategy without introducing a heavy testing framework.
+Where possible, use native browser testing utilities and built-in JavaScript runtime testing capabilities.
+Test at minimum:
+* Application initialization.
+* Chatbot creation.
+* Chatbot duplication.
+* Chatbot editing.
+* Configuration validation.
+* JSON import/export.
+* Configuration migration.
+* Automatic saving.
+* Knowledge-base matching.
+* Fallback responses.
+* Conversation flows.
+* Conditional logic.
+* Quick replies.
+* Session persistence.
+* Widget installation.
+* Mobile responsiveness.
+* Widget isolation.
+* Domain restrictions.
+* Invalid API responses.
+* Webhook authentication.
+* Integration error handling.
+* Privacy and data deletion.
+* Multi-tenant authorization wherever SaaS infrastructure is enabled.
+Include manual end-to-end test instructions.
+Do not mark a feature as tested unless it has actually been tested.
+20. DEPLOYMENT REQUIREMENTS
+The core application should be deployable as a static website.
+Support deployment instructions for:
+* GitHub Pages.
+* Netlify.
+* Cloudflare Pages.
+* Ordinary static hosting.
+Document any static-host restrictions, including relative-path handling, MIME types, and cross-origin considerations.
+The optional integration bridge must have independent deployment instructions for a suitable serverless environment.
+Ensure that production deployment does not depend on a development server.
+Use environment variables or the host platform's secure secret-management system for server-side credentials.
+Never place production secrets in Git repositories.
+21. PRODUCT DESIGN AND COMMERCIAL READINESS
+Make the application feel like a professional Micro-SaaS product.
+Include:
+* A clear brand identity.
+* Consistent dashboard navigation.
+* An effective onboarding experience.
+* Attractive empty states.
+* Helpful contextual guidance.
+* Practical chatbot templates.
+* Professional form controls.
+* A clear publishing workflow.
+* Integration readiness indicators.
+* A simple plan for future subscription support.
+* Comprehensive error handling.
+Do not prioritize decorative marketing features over core functionality.
+Focus on making chatbot creation, customization, testing, publishing, and integration exceptionally straightforward.
+22. IMPLEMENTATION WORKFLOW
+Follow this implementation order.
+PHASE 1: Repository Assessment
+Inspect the existing repository, identify existing files and conventions, and determine the safest implementation approach.
+Do not overwrite useful existing work without justification.
+PHASE 2: Architecture and Planning
+Define:
+* Application architecture.
+* Runtime architecture.
+* Data model.
+* Configuration schema.
+* Integration interfaces.
+* Security boundaries.
+* Storage modes.
+* Documentation plan.
+PHASE 3: Application Foundation
+Build the main interface, responsive design system, dashboard, navigation, state management, and data persistence.
+PHASE 4: Chatbot Creator
+Implement the creation wizard, editor, identity settings, theme configuration, knowledge base, workflows, and business rules.
+PHASE 5: Chatbot Runtime
+Build the independent runtime engine, website widget, conversation processor, session handling, and fallback system.
+PHASE 6: Publishing and Export
+Implement configuration validation, preview, publishing, code generation, JSON import/export, and version management.
+PHASE 7: Integration Architecture
+Complete website integration first.
+Then implement and document the secure integration bridge and supported messaging adapters.
+Prioritize Telegram and WhatsApp as the first external messaging integrations.
+PHASE 8: Quality Assurance
+Run the available tests, inspect application behavior, identify bugs, and resolve them.
+PHASE 9: Documentation
+Create both complete documentation systems and the supporting technical references.
+PHASE 10: Production Readiness
+Review:
+* Security.
+* Performance.
+* Accessibility.
+* Responsiveness.
+* Data integrity.
+* Integration accuracy.
+* Deployment.
+* Error handling.
+* Documentation completeness.
+Do not stop after creating the UI. Complete the operational application.
+23. STRICT DEVELOPMENT RULES FOR THE CODING AGENT
+Follow these rules throughout the project:
+1. Implement working functionality rather than decorative controls.
+2. Do not leave core buttons without actions.
+3. Do not use fake sample data as genuine operational statistics.
+4. Do not simulate successful third-party integrations.
+5. Do not create unnecessary abstractions.
+6. Do not install dependencies for functionality native browser APIs can handle.
+7. Do not expose secrets in client-side code.
+8. Do not hardcode chatbot-specific behavior into the shared runtime.
+9. Keep every chatbot independently configurable.
+10. Validate every imported configuration.
+11. Preserve user data when updating the application.
+12. Use meaningful filenames and readable code.
+13. Comment on important technical decisions.
+14. Maintain separation between administrative and consumer-facing code.
+15. Provide useful error messages.
+16. Follow official provider documentation for integrations.
+17. Explicitly disclose infrastructure requirements.
+18. Avoid unsupported compatibility claims.
+19. Ensure the application works without a bundler or package installation.
+20. Never sacrifice security for the sake of maintaining a frontend-only architecture.
+When you encounter a feature that cannot be implemented safely under the zero-framework/static-only constraint, explain the limitation and implement the smallest appropriate optional integration boundary.
+24. FINAL ACCEPTANCE CRITERIA
+The project is considered complete only when the following requirements have been satisfied.
+Core creator application
+* The application launches without installing npm packages.
+* No frontend framework is required.
+* The dashboard is responsive and accessible.
+* Users can create multiple chatbot configurations.
+* Users can edit and duplicate chatbots.
+* Chatbot configurations can be imported and exported.
+* Configuration validation works.
+* Users can customize chatbot identity and appearance.
+* Users can create and manage knowledge-base entries.
+* Users can build and test conversational workflows.
+* Users can preview chatbot behavior.
+* Users can publish supported chatbot configurations.
+Chatbot runtime
+* The website widget works independently.
+* The widget is embeddable using a simple script.
+* Widget styles are isolated from host websites.
+* Chatbot configurations load correctly.
+* Questions are matched against configured knowledge.
+* Fallback behavior works.
+* Quick replies function correctly.
+* Session context is managed appropriately.
+* The widget is mobile responsive.
+* Runtime errors are handled gracefully.
+Integrations
+* Website integration works.
+* The adapter architecture is documented.
+* Telegram integration has a real secure implementation or is explicitly identified as requiring an external bridge.
+* WhatsApp integration has a real secure implementation or is explicitly identified as requiring an external bridge.
+* Credentials are never exposed to the browser.
+* Webhook security is implemented appropriately.
+* Integration limitations are documented accurately.
+Documentation
+* Developer documentation is complete.
+* Chatbot owner documentation is complete.
+* Installation guides are included.
+* Configuration references are included.
+* Integration guides are included.
+* Security and privacy documentation are included.
+* Troubleshooting documentation is included.
+Production quality
+* No obvious critical security vulnerabilities remain.
+* No major application-breaking errors remain.
+* No dead core interface controls remain.
+* Data import/export works.
+* The application handles invalid data appropriately.
+* Accessibility has been reviewed.
+* Performance has been reviewed.
+* Deployment instructions have been verified.
+* All implemented features have been tested.
+25. FINAL DELIVERY REPORT
+When implementation is complete, provide a detailed final report containing:
+1. Project overview.
+2. Implemented features.
+3. Application architecture.
+4. Final project directory structure.
+5. Features that are fully operational.
+6. Features requiring external service configuration.
+7. Features requiring serverless infrastructure.
+8. Features not yet implemented.
+9. Security measures implemented.
+10. Testing performed and results.
+11. How to run the application locally.
+12. How to deploy the application.
+13. How to create the first chatbot.
+14. How to publish and embed a chatbot.
+15. How to configure WhatsApp and Telegram.
+16. Links or paths to both documentation guides.
+Do not claim that every integration or production capability is operational unless it has been implemented and verified.
+26. FINAL PRODUCT VISION
+The finished application must become a practical, extensible, lightweight chatbot creation ecosystem.
+A user with no advanced programming experience should be able to open the application, create a chatbot, give it a business identity, customize its design, supply business information, configure conversation flows, test its responses, publish it, and install it on a website without having to understand complex software frameworks.
+Developers should be able to extend the system, introduce new messaging adapters, customize the runtime, and integrate additional platforms without rebuilding the core application.
+Business owners should be able to reuse the same chatbot configuration across supported communication channels wherever the underlying platform capabilities permit.
+The ultimate objective is to build a maintainable, portable, secure, commercially useful, zero-framework chatbot creator Micro-SaaS application that can grow into a full multi-channel customer-support ecosystem.
+Start by inspecting the repository and then implement the complete application. Do not stop at planning, scaffolding, mockups, or documentation outlines. Deliver working software, meaningful tests, and both complete documentation systems.
